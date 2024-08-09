@@ -19,7 +19,6 @@
 package top.dearbo.web.log.aspect;
 
 
-import cn.hutool.core.util.URLUtil;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServletRequest;
@@ -108,7 +107,7 @@ public class SysLogAspect {
 		sysLogEntity.setSubject(StringUtils.isBlank(sysLog.subject()) ? sysLogConfig.getSubject(request) : sysLog.subject());
 		sysLogEntity.setRemark(sysLog.value());
 		sysLogEntity.setIp(WebServletUtils.getIpAddress(request));
-		sysLogEntity.setRequestUri(URLUtil.getPath(request.getRequestURI()));
+		sysLogEntity.setRequestUri(request.getRequestURL().toString());
 		sysLogEntity.setMethod(request.getMethod());
 		sysLogEntity.setUserAgent(request.getHeader("user-agent"));
 		String contentType = request.getContentType();

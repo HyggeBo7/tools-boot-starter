@@ -21,10 +21,6 @@
         </dependency>
         <!--scope:provided(该依赖在打包过程中，不需要打进去，这个由运行的环境来提供)-->
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-text</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <scope>provided</scope>

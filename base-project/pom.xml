@@ -27,7 +27,7 @@
     <dependencyManagement>
         <dependencies>
             <!--dan-->
-            <dependency>
+            <!--<dependency>
                 <groupId>${dan.groupId}</groupId>
                 <artifactId>common-core</artifactId>
                 <version>${dan.version}</version>
@@ -41,16 +41,16 @@
                 <groupId>${dan.groupId}</groupId>
                 <artifactId>web-common-spring</artifactId>
                 <version>${dan.version}</version>
-            </dependency>
+            </dependency>-->
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
         <!--dan-->
-        <dependency>
+        <!--<dependency>
             <groupId>${dan.groupId}</groupId>
             <artifactId>common-core</artifactId>
-        </dependency>
+        </dependency>-->
 
     </dependencies>
 

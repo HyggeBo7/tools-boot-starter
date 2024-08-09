@@ -19,6 +19,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>17</java.version>
+        <top-prd-version>1.0.0</top-prd-version>
         <!--<junit.version>4.12</junit.version>-->
         <!--<spring.cloud.version>Hoxton.SR7</spring.cloud.version>-->
         <spring.boot.version>3.3.1</spring.boot.version>
@@ -40,6 +41,18 @@
 
     <dependencyManagement>
         <dependencies>
+            <!--private start-->
+            <dependency>
+                <groupId>top.dearbo.commons</groupId>
+                <artifactId>common-base</artifactId>
+                <version>${top-prd-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.dearbo.commons</groupId>
+                <artifactId>common-core</artifactId>
+                <version>${top-prd-version}</version>
+            </dependency>
+            <!--private end-->
             <!--spring boot mybatis-->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>

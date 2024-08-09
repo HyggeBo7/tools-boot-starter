@@ -13,7 +13,7 @@
     <description>bo 日志服务</description>
 
     <dependencies>
-        <dependency>
+        <!--<dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-core</artifactId>
             <version>${hutool.version}</version>
@@ -22,7 +22,7 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-extra</artifactId>
             <version>${hutool.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>top.dearbo.web</groupId>
             <artifactId>common-web-core</artifactId>
