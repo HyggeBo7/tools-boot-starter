@@ -31,7 +31,8 @@
         <!--pagehelper 分页-->
         <boot.pagehelper.version>2.1.0</boot.pagehelper.version>
         <pagehelper.version>6.1.0</pagehelper.version>
-        <!--子项目-->
+        <!--工具类-->
+        <hutool.version>5.8.29</hutool.version>
         <!--可以操作html元素-->
         <htmlunit.version>4.4.0</htmlunit.version>
         <jsoup.version>1.18.1</jsoup.version>

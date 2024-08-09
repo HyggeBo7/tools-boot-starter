@@ -26,6 +26,29 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <!--private start-->
+
+            <dependency>
+                <groupId>top.dearbo.web</groupId>
+                <artifactId>common-web-core</artifactId>
+                <version>${top-prd-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>top.dearbo.web</groupId>
+                <artifactId>common-web-spring</artifactId>
+                <version>${top-prd-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>top.dearbo.web</groupId>
+                <artifactId>common-web-log</artifactId>
+                <version>${top-prd-version}</version>
+            </dependency>
+
+            <!--private end-->
+
             <!--dan-->
             <!--<dependency>
                 <groupId>${dan.groupId}</groupId>
@@ -51,6 +74,16 @@
             <groupId>${dan.groupId}</groupId>
             <artifactId>common-core</artifactId>
         </dependency>-->
+
+        <dependency>
+            <groupId>top.dearbo.commons</groupId>
+            <artifactId>common-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>top.dearbo.web</groupId>
+            <artifactId>common-web-spring</artifactId>
+        </dependency>
 
     </dependencies>
 
