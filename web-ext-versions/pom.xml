@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.1</version>
+        <relativePath/>
+    </parent>
+    <groupId>top.dearbo.common</groupId>
+    <artifactId>web-ext-versions</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <name>web-ext-versions</name>
+    <description>web-ext-versions</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>17</java.version>
+        <!--<junit.version>4.12</junit.version>-->
+        <!--<spring.cloud.version>Hoxton.SR7</spring.cloud.version>-->
+        <spring.boot.version>3.3.1</spring.boot.version>
+        <!--打包时跳过执行test-->
+        <skipTests>true</skipTests>
+        <!--mybatis-spring-->
+        <boot.mybatis.version>3.0.3</boot.mybatis.version>
+        <boot.mybatis.plus.version>3.5.7</boot.mybatis.plus.version>
+        <!--pagehelper 分页-->
+        <boot.pagehelper.version>2.1.0</boot.pagehelper.version>
+        <pagehelper.version>6.1.0</pagehelper.version>
+        <!--子项目-->
+        <!--可以操作html元素-->
+        <htmlunit.version>4.4.0</htmlunit.version>
+        <jsoup.version>1.18.1</jsoup.version>
+        <swagger.knife4j.version>4.5.0</swagger.knife4j.version>
+        <druid.version>1.2.23</druid.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--spring boot mybatis-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${boot.mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${boot.mybatis.plus.version}</version>
+            </dependency>
+            <!--分页 pagehelper-spring-boot-starter 包含pagehelper+mybatis-spring-boot-starter -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${boot.pagehelper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+            <!--操作html元素,执行js-->
+            <dependency>
+                <groupId>org.htmlunit</groupId>
+                <artifactId>htmlunit</artifactId>
+                <version>${htmlunit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>${jsoup.version}</version>
+            </dependency>
+            <!-- Swagger3依赖 -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+                <version>${swagger.knife4j.version}</version>
+            </dependency>
+            <!--阿里数据库连接池spring boot3 使用这个依赖-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-3-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <!--<version>3.11.0</version>-->
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring.boot.version}</version>
+                    <configuration>
+                        <layout>ZIP</layout><!-- enables PropertiesLauncher -->
+                        <includeSystemScope>true</includeSystemScope>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+        <!--<repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+        </repository>-->
+    </repositories>
+
+</project>

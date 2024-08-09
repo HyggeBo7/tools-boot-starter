@@ -1,0 +1,24 @@
+﻿【git-config->https://www.cnblogs.com/tinywan/p/8241077.html】
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = git@github.com:HyggeBo7/tools-boot-starter.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[remote "second"]
+	url = https://gitee.com/HyggeBo7/tools-boot-starter.git
+	fetch = +refs/heads/*:refs/remotes/second/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+
+git push -u second master
+
+
+git push origin master
+
+git push second master

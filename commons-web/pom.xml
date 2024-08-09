@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>top.dearbo.common</groupId>
+        <artifactId>web-ext-versions</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>top.dearbo.web</groupId>
+    <artifactId>commons-web</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>common-web-core</module>
+        <module>common-web-log</module>
+        <module>common-web-spring</module>
+    </modules>
+    <properties>
+        <spring.boot.version>3.3.1</spring.boot.version>
+        <hystrix.core.version>1.5.18</hystrix.core.version>
+        <!--pagehelper 分页-->
+        <pagehelper.version>6.1.0</pagehelper.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--current common module start-->
+            <dependency>
+                <groupId>top.dearbo.web</groupId>
+                <artifactId>common-web-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.dearbo.web</groupId>
+                <artifactId>common-web-spring</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!--current common module end-->
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--分页-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+</project>

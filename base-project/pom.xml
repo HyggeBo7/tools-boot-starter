@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>top.dearbo.common</groupId>
+        <artifactId>web-ext-versions</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <groupId>top.dearbo.base</groupId>
+    <artifactId>base-project</artifactId>
+    <packaging>pom</packaging>
+    <name>base-project</name>
+
+    <properties>
+        <!--迭代更新-->
+        <!--mybatis 生成插件-->
+        <dan-mybatis>1.3.1</dan-mybatis>
+        <dan.version>2.0.1</dan.version>
+        <!--github发布的-->
+        <!--<dan.groupId>com.github.DearBo7.dan</dan.groupId>-->
+        <!--本地中央仓库发布的-->
+        <dan.groupId>top.dearbo</dan.groupId>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--dan-->
+            <dependency>
+                <groupId>${dan.groupId}</groupId>
+                <artifactId>common-core</artifactId>
+                <version>${dan.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${dan.groupId}</groupId>
+                <artifactId>common-frame</artifactId>
+                <version>${dan.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${dan.groupId}</groupId>
+                <artifactId>web-common-spring</artifactId>
+                <version>${dan.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <!--dan-->
+        <dependency>
+            <groupId>${dan.groupId}</groupId>
+            <artifactId>common-core</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>
