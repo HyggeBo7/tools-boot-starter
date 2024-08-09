@@ -33,6 +33,7 @@
         <pagehelper.version>6.1.0</pagehelper.version>
         <!--工具类-->
         <hutool.version>5.8.29</hutool.version>
+        <fastjson.version>2.0.52</fastjson.version>
         <!--可以操作html元素-->
         <htmlunit.version>4.4.0</htmlunit.version>
         <jsoup.version>1.18.1</jsoup.version>
@@ -76,17 +77,6 @@
                 <artifactId>pagehelper</artifactId>
                 <version>${pagehelper.version}</version>
             </dependency>
-            <!--操作html元素,执行js-->
-            <dependency>
-                <groupId>org.htmlunit</groupId>
-                <artifactId>htmlunit</artifactId>
-                <version>${htmlunit.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jsoup</groupId>
-                <artifactId>jsoup</artifactId>
-                <version>${jsoup.version}</version>
-            </dependency>
             <!-- Swagger3依赖 -->
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
@@ -98,6 +88,22 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-3-starter</artifactId>
                 <version>${druid.version}</version>
+            </dependency>
+            <!--操作html元素,执行js-->
+            <dependency>
+                <groupId>org.htmlunit</groupId>
+                <artifactId>htmlunit</artifactId>
+                <version>${htmlunit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>${jsoup.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
