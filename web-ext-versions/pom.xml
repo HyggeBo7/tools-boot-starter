@@ -5,13 +5,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.1</version>
+        <version>3.5.8</version>
         <relativePath/>
     </parent>
     <groupId>top.dearbo.common</groupId>
     <artifactId>web-ext-versions</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <name>web-ext-versions</name>
     <description>web-ext-versions</description>
 
@@ -22,23 +22,23 @@
         <top-prd-version>1.0.0</top-prd-version>
         <!--<junit.version>4.12</junit.version>-->
         <!--<spring.cloud.version>Hoxton.SR7</spring.cloud.version>-->
-        <spring.boot.version>3.3.1</spring.boot.version>
+        <spring.boot.version>3.5.8</spring.boot.version>
         <!--打包时跳过执行test-->
         <skipTests>true</skipTests>
         <!--mybatis-spring-->
-        <boot.mybatis.version>3.0.3</boot.mybatis.version>
-        <boot.mybatis.plus.version>3.5.7</boot.mybatis.plus.version>
+        <boot.mybatis.version>3.0.5</boot.mybatis.version>
+        <boot.mybatis.plus.version>3.5.15</boot.mybatis.plus.version>
         <!--pagehelper 分页-->
-        <boot.pagehelper.version>2.1.0</boot.pagehelper.version>
-        <pagehelper.version>6.1.0</pagehelper.version>
+        <boot.pagehelper.version>2.1.1</boot.pagehelper.version>
+        <pagehelper.version>6.1.1</pagehelper.version>
         <!--工具类-->
-        <hutool.version>5.8.29</hutool.version>
-        <fastjson.version>2.0.52</fastjson.version>
+        <hutool.version>5.8.42</hutool.version>
+        <fastjson.version>2.0.60</fastjson.version>
         <!--可以操作html元素-->
-        <htmlunit.version>4.4.0</htmlunit.version>
-        <jsoup.version>1.18.1</jsoup.version>
+        <htmlunit.version>4.20.0</htmlunit.version>
+        <jsoup.version>1.21.2</jsoup.version>
         <swagger.knife4j.version>4.5.0</swagger.knife4j.version>
-        <druid.version>1.2.23</druid.version>
+        <druid.version>1.2.27</druid.version>
     </properties>
 
     <dependencyManagement>
